@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,28 +6,35 @@
     font-family: sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* HTML e Body */
 html {
     height: 500vh;
 }
 
-#toggle-mode{
+body {
+    background-color: black;
+    color: white;
+    margin: 20px; /* Reduz o margin para melhorar a responsividade */
+}
+
+/* Toggle de Modo */
+#toggle-mode {
     border-radius: 50%;
     border: none;
 }
-/* Estilos para o modo claro (dia) */
+
+/* Estilos para o Modo Claro (Dia) */
 body.light-mode {
     background-color: #f8f9fa;
     color: #212529;
-   
 }
 
 body.light-mode .btn-secondary {
     background-color: #6c757d;
     color: white;
-
 }
 
-/* Estilos para o modo escuro (noturno) */
+/* Estilos para o Modo Escuro (Noturno) */
 body.dark-mode {
     background-color: #212529;
     color: #f8f9fa;
@@ -37,6 +45,7 @@ body.dark-mode .btn-secondary {
     color: white;
 }
 
+/* Botão Mover */
 .btn-mover {
     position: fixed;
     width: 32px;
@@ -60,9 +69,10 @@ body.dark-mode .btn-secondary {
     font-size: 24px;
 }
 
+/* Containers e Flexbox */
 .container {
     max-width: 1200px;
-    padding: 0 15px; /* Adiciona espaçamento nas laterais */
+    padding: 0 15px;
 }
 
 .flex {
@@ -76,6 +86,7 @@ body.dark-mode .btn-secondary {
     top: 80px;
 }
 
+/* Cabeçalho */
 header {
     width: 100%;
     padding: 60px 4%;
@@ -109,33 +120,29 @@ header ul li {
     margin: 0 20px;
 }
 
-body {
-    background-color: black;
-    color: white;
-    margin: 20px; /* Reduz o margin para melhorar a responsividade */
-}
-
 header ul li a {
     color: white;
     text-decoration: none;
 }
+
+/* Seções e Texto */
 .div3 {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     height: 300px;
 }
 
-
 .container2 {
-  
     position: relative;
     bottom: 50px;
     text-align: justify;
-    line-height: 30px; /* Ajusta a altura da linha para melhorar a legibilidade */
+    line-height: 30px;
 }
 
-h1:hover{
+h1:hover {
     color: #fe775a;
 }
+
 .img {
     transition: transform 1.5s linear;
 }
@@ -145,13 +152,11 @@ h1:hover{
 }
 
 #p1 {
-    
     font-size: 25px;
     color: beige;
 }
 
 #p1:hover {
-   
     background-image: url("./design-de-fundo-branco-de-neve_511635-572.avif");
     color: crimson;
     border-radius: 5px;
@@ -181,6 +186,7 @@ section {
     min-height: 100vh;
 }
 
+/* Animações */
 .hidden {
     opacity: 0;
     filter: blur(15px);
@@ -195,6 +201,7 @@ section {
     transition: all 1s;
 }
 
+/* Logos e Avatares */
 .logo {
     display: flex;
     flex-wrap: wrap;
@@ -218,6 +225,7 @@ section {
     transition-delay: 0.5s;
 }
 
+/* Links do WhatsApp */
 .whatsapp-link {
     position: fixed;
     width: 60px;
@@ -237,6 +245,7 @@ section {
     margin-top: 16px;
 }
 
+/* Botões */
 .btn {
     width: 100px;
 }
@@ -245,6 +254,7 @@ section {
     padding: 20px;
 }
 
+/* Rodapé */
 footer {
     width: 100%;
 }
@@ -268,8 +278,36 @@ footer li {
 .copy:hover {
     box-shadow: 2px 3px 5px 6px rgb(252, 251, 251);
 }
-span{
-    color:#f8f9fa;
+
+span {
+    color: #f8f9fa;
+}
+
+/* Banner de Cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Escondido por padrão */
+}
+
+.cookie-button {
+    background-color: #ff8800;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.cookie-button:hover {
+    transform: scale(0.95); /* Encolhe o botão em 5% */
+    background-color: #ff6600;
 }
 
 /* Media Queries para Responsividade */
@@ -279,16 +317,16 @@ span{
         margin: 10px 0;
         text-align: center;
     }
-    
+
     .flex {
         flex-direction: column;
         align-items: center;
     }
-    
+
     header i {
         font-size: 50px;
     }
-    
+
     #p1 {
         font-size: 16px;
     }
@@ -312,51 +350,26 @@ span{
     .btn {
         width: 120px;
     }
-    
+
     /* Imagens em coluna */
     .logo {
         flex-direction: column;
     }
-    .image1{
+
+    .image1 {
         position: relative;
         height: auto;
         width: 300px;
-  right:80px ;
+        right: 80px;
     }
 
     .avatar {
         height: auto;
         width: 100%;
-        max-width:80px;
+        max-width: 80px;
     }
 }
-.cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    z-index: 1000;
-    display: none; /* Escondido por padrão */
-}
 
-.cookie-button {
-  position: relative;
-  float: inline-end;
-    background-color: #ff8800;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.cookie-button:hover {
-    transform: scale(0.95); /* Encolhe o botão em 5% */
-    background-color: #ff6600;
-}
 @media (max-width: 600px) {
     .cookie-banner {
         padding: 15px;
