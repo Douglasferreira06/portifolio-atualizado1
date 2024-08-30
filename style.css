@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    height: 500vh;
+}
+
+#toggle-mode{
+    border-radius: 50%;
+    border: none;
+}
+/* Estilos para o modo claro (dia) */
+body.light-mode {
+    background-color: #f8f9fa;
+    color: #212529;
+   
+}
+
+body.light-mode .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+
+}
+
+/* Estilos para o modo escuro (noturno) */
+body.dark-mode {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+body.dark-mode .btn-secondary {
+    background-color: #343a40;
+    color: white;
+}
+
+.btn-mover {
+    position: fixed;
+    width: 32px;
+    bottom: 40px;
+    right: 40px;
+    display: none; /* Escondido por padrão */
+    background-color: #fe775a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.btn-mover:hover {
+    background-color: #ff5733;
+    color: #fff;
+}
+
+.btn-mover i {
+    font-size: 24px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px; /* Adiciona espaçamento nas laterais */
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#movera {
+    position: fixed;
+    top: 80px;
+}
+
+header {
+    width: 100%;
+    padding: 60px 4%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+header.rolagem {
+    background-color: rgb(59, 59, 32);
+    padding: 20px 4%;
+}
+
+header.rolagem a, header.rolagem i {
+    color: #fe775a;
+}
+
+header i {
+    font-size: 60px;
+    color: white;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 20px; /* Reduz o margin para melhorar a responsividade */
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+}
+.div3 {
+    width: 1200px;
+    height: 300px;
+}
+
+
+.container2 {
+  
+    position: relative;
+    bottom: 50px;
+    text-align: justify;
+    line-height: 30px; /* Ajusta a altura da linha para melhorar a legibilidade */
+}
+
+h1:hover{
+    color: #fe775a;
+}
+.img {
+    transition: transform 1.5s linear;
+}
+
+.img:hover {
+    transform: scale3d(2, 2, 2);
+}
+
+#p1 {
+    
+    font-size: 25px;
+    color: beige;
+}
+
+#p1:hover {
+   
+    background-image: url("./design-de-fundo-branco-de-neve_511635-572.avif");
+    color: crimson;
+    border-radius: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.banner {
+    background-image: url("./images.jfif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 3s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.avatar {
+    height: 150px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.logo:nth-child(1) {
+    transition-delay: 0.3s;
+}
+.logo:nth-child(2) {
+    transition-delay: 0.4s;
+}
+.logo:nth-child(3) {
+    transition-delay: 0.5s;
+}
+
+.whatsapp-link {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 150px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index: 1000;
+}
+
+.fa-whatsapp {
+    margin-top: 16px;
+}
+
+.btn {
+    width: 100px;
+}
+
+.btn:hover {
+    padding: 20px;
+}
+
+footer {
+    width: 100%;
+}
+
+footer li {
+    font-size: 20px;
+    list-style-type: none;
+    color: #fe775a;
+}
+
+.copy {
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    text-align: center;
+    background-color: #888;
+    border-radius: 5px;
+    border: solid black 2px;
+}
+
+.copy:hover {
+    box-shadow: 2px 3px 5px 6px rgb(252, 251, 251);
+}
+span{
+    color:#f8f9fa;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header i {
+        font-size: 50px;
+    }
+    
+    #p1 {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .avatar {
+        height: 120px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .btn {
+        width: 120px;
+    }
+    
+    /* Imagens em coluna */
+    .logo {
+        flex-direction: column;
+    }
+    .image1{
+        position: relative;
+        height: auto;
+        width: 300px;
+  right:80px ;
+    }
+
+    .avatar {
+        height: auto;
+        width: 100%;
+        max-width:80px;
+    }
+}
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Escondido por padrão */
+}
+
+.cookie-button {
+  position: relative;
+  float: inline-end;
+    background-color: #ff8800;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.cookie-button:hover {
+    transform: scale(0.95); /* Encolhe o botão em 5% */
+    background-color: #ff6600;
+}
+@media (max-width: 600px) {
+    .cookie-banner {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .cookie-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
